@@ -9,24 +9,23 @@ if __name__ == "__main__":
 
     ops = {"+": add, "-": sub, "*": mul, "/": div}
 
-    try:
+try:
         a, op, b = argv[1:]
 
-    except ValueError:
+except ValueError:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys_exit(1)
 
-    try:
+try:
         print(a, op, b, "=", ops[op](int(a), int(b)))
 
-    except KeyError:
+except KeyError:
         print("Unknown operator. Available operators: +, -, * and /")
         sys_exit(1)
 
-    except ValueError:
+except ValueError:
         print("Invalid operand. Must be an integer")
         sys_exit(1)
-
-    except ZeroDivisionError:
+except ZeroDivisionError:
         print("Invalid operation. Cannot divide by zero")
         sys_exit(1)
