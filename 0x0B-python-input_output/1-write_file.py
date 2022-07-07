@@ -5,4 +5,4 @@
 def write_file(filename="", text=""):
     """Write text to a file"""
     with open(filename, 'w') as ostream:
-        return ostream.write(text)"
+        return ostream.write(text)
